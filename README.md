@@ -1,8 +1,8 @@
 # Phonebook-APP
 
-The Phonebook App is the perfect tool for managing your contacts. With a simple and intuitive interface, you can easily create, read, update and delete your contacts. This app is powerful yet easy to use and is the perfect solution for keeping your contacts. 
+The Phonebook App is the perfect tool for managing your contacts. With a simple and intuitive interface, you can easily create, read, update and delete your contacts. This app is powerful yet easy to use and is the perfect solution for keeping your contacts.
 
-It was created with React for the front end and Spring Boot + MongoDB at the back end. 
+It was created with React for the front end and Spring Boot + MongoDB at the back end.
 
 ## Features
 
@@ -45,7 +45,7 @@ The application validates empty fields and also applies a mask to the phone numb
 - Back end: Java, Spring Boot, Spring Data, Testcontainers, JUnit.
 - Database: MongoDB
 - Infrastructure: Docker, Docker-Compose, OpenAPI, Make, Maven, NPM
-- Documentation: OpenAPI, Swagger
+- Documentation: OpenAPI, Swagger, JavaDoc
 
 ## Tests
 
