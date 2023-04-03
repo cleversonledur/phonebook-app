@@ -27,6 +27,12 @@ The user can search for contacts using the search field. It considers both the f
 
 ![](readme_images/search.gif)
 
+### Edit contacts
+
+You can edit the contacts by clicking in any item in the list and changing the values in the form.
+
+![](readme_images/edit.gif)
+
 ### Deleting contacts
 
 When clicking on the delete (Trash icon) button, a confirmation modal is shown. If the user confirms it, the contact will be deleted.
