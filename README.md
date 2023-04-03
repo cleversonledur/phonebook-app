@@ -1,6 +1,8 @@
 # Phonebook-APP
 
-This is an app for managing contacts. It was created with React for the front end and Spring Boot at the back end. The database used is MongoDB.
+The Phonebook App is the perfect tool for managing your contacts. With a simple and intuitive interface, you can easily create, read, update and delete your contacts. This app is powerful yet easy to use and is the perfect solution for keeping your contacts. 
+
+It was created with React for the front end and Spring Boot + MongoDB at the back end. 
 
 ## Features
 
