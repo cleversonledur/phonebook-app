@@ -14,6 +14,13 @@ generate-openapi-docs:
 # Generate all
 generate-docs: install-openapi-generator-cli generate-openapi-docs
 
+# generate and open openapi documentation in browser
+openapi-docs:
+	@echo "Generating openapi documentation"
+	@java -jar openapi-generator-cli.jar generate -i ./openapi.yml -g html2 -o docs
+	@echo "Opening openapi documentation"
+	@open docs/index.html
+
 # build the spring boot app in /backend
 build-backend:
 	@echo "Building backend"
@@ -42,3 +49,11 @@ run: run-docker
 
 # build and run the app and docker image
 build-run: build run
+
+# generate and open javadoc in browser
+javadoc:
+	@echo "Generating javadoc"
+	@cd backend && ./mvnw javadoc:javadoc
+	@echo "Opening javadoc"
+	@open backend/target/site/apidocs/index.html
+

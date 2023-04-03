@@ -57,6 +57,16 @@ You can access the API documentation in the /docs folder.
 
 It is possible to generate the documentation by running `make generate-docs` in the root directory of this repository.
 
+You can also generate and open OpenAPI or JavaDoc documentation by using the following commands:
+
+- OpenAPI documentation
+
+        make openapi-docs
+
+- JavaDoc documentation
+
+        make javadoc
+
 ## Requirements
 
 For building and running this application, you need to have:
@@ -70,7 +80,7 @@ For building and running this application, you need to have:
 
 You can build and run the application by running:
 
-`make build-run`
+    make build-run
 
 Or, if you manually built the application it is also possible to start the whole application using docker-compose directly.
 
