@@ -52,6 +52,12 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/Contact"
+            examples:
+              Contact:
+                value:
+                  firstName: John
+                  lastName: Doe
+                  phoneNumber: 123-456-7890
       responses:
         "201":
           description: Contact created
@@ -59,10 +65,17 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Contact"
+              examples:
+                Contact:
+                  value:
+                    firstName: John
+                    lastName: Doe
+                    phoneNumber: 123-456-7890
         "400":
           description: Bad request
         "500":
           description: Error processing request
+
   /contacts/{id}:
     get:
       tags:
@@ -81,6 +94,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Contact"
+              examples:
+                Contact:
+                  value:
+                    firstName: John
+                    lastName: Doe
+                    phoneNumber: 123-456-7890
         "404":
           description: No contact found with id
         "500":
@@ -101,6 +120,12 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/Contact"
+            examples:
+              Contact:
+                value:
+                  firstName: John
+                  lastName: Doe
+                  phoneNumber: 123-456-7890
       responses:
         "200":
           description: Contact updated
@@ -108,6 +133,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Contact"
+              examples:
+                Contact:
+                  value:
+                    firstName: John
+                    lastName: Doe
+                    phoneNumber: 123-456-7890
         "400":
           description: Bad request
         "500":

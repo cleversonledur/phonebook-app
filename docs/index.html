@@ -1999,6 +1999,15 @@ pub fn main() {
     "application/json" : {
       "schema" : {
         "$ref" : "#/components/schemas/Contact"
+      },
+      "examples" : {
+        "Contact" : {
+          "value" : {
+            "firstName" : "John",
+            "lastName" : "Doe",
+            "phoneNumber" : "123-456-7890"
+          }
+        }
       }
     }
   }
@@ -2129,7 +2138,7 @@ public class ContactApiExample {
         // Create an instance of the API class
         ContactApi apiInstance = new ContactApi();
         String id = id_example; // String | 
-        Contact contact = ; // Contact | 
+        Contact contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact | 
         
         try {
             Contact result = apiInstance.contactsIdPut(id, contact);
@@ -2150,7 +2159,7 @@ public class ContactApiExample {
     public static void main(String[] args) {
         ContactApi apiInstance = new ContactApi();
         String id = id_example; // String | 
-        Contact contact = ; // Contact | 
+        Contact contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact | 
         
         try {
             Contact result = apiInstance.contactsIdPut(id, contact);
@@ -2172,7 +2181,7 @@ public class ContactApiExample {
 // Create an instance of the API class
 ContactApi *apiInstance = [[ContactApi alloc] init];
 String *id = id_example; //  (default to null)
-Contact *contact = ; // 
+Contact *contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // 
 
 // Update a contact
 [apiInstance contactsIdPutWith:id
@@ -2194,7 +2203,7 @@ Contact *contact = ; //
 // Create an instance of the API class
 var api = new ContactManagementSystem.ContactApi()
 var id = id_example; // {String} 
-var contact = ; // {Contact} 
+var contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // {Contact} 
 
 var callback = function(error, data, response) {
   if (error) {
@@ -2249,7 +2258,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Create an instance of the API class
 $api_instance = new OpenAPITools\Client\Api\ContactApi();
 $id = id_example; // String | 
-$contact = ; // Contact | 
+$contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact | 
 
 try {
     $result = $api_instance->contactsIdPut($id, $contact);
@@ -2289,7 +2298,7 @@ from pprint import pprint
 # Create an instance of the API class
 api_instance = openapi_client.ContactApi()
 id = id_example # String |  (default to null)
-contact =  # Contact | 
+contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"} # Contact | 
 
 try: 
     # Update a contact
@@ -2304,7 +2313,7 @@ except ApiException as e:
 
 pub fn main() {
     let id = id_example; // String
-    let contact = ; // Contact
+    let contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact
 
     let mut context = ContactApi::Context::default();
     let result = client.contactsIdPut(id, contact, &context).wait();
@@ -2367,6 +2376,15 @@ $(document).ready(function() {
     "application/json" : {
       "schema" : {
         "$ref" : "#/components/schemas/Contact"
+      },
+      "examples" : {
+        "Contact" : {
+          "value" : {
+            "firstName" : "John",
+            "lastName" : "Doe",
+            "phoneNumber" : "123-456-7890"
+          }
+        }
       }
     }
   },
@@ -2437,6 +2455,15 @@ $(document).ready(function() {
     "application/json" : {
       "schema" : {
         "$ref" : "#/components/schemas/Contact"
+      },
+      "examples" : {
+        "Contact" : {
+          "value" : {
+            "firstName" : "John",
+            "lastName" : "Doe",
+            "phoneNumber" : "123-456-7890"
+          }
+        }
       }
     }
   }
@@ -2566,7 +2593,7 @@ public class ContactApiExample {
         
         // Create an instance of the API class
         ContactApi apiInstance = new ContactApi();
-        Contact contact = ; // Contact | 
+        Contact contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact | 
         
         try {
             Contact result = apiInstance.contactsPost(contact);
@@ -2586,7 +2613,7 @@ public class ContactApiExample {
 public class ContactApiExample {
     public static void main(String[] args) {
         ContactApi apiInstance = new ContactApi();
-        Contact contact = ; // Contact | 
+        Contact contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact | 
         
         try {
             Contact result = apiInstance.contactsPost(contact);
@@ -2607,7 +2634,7 @@ public class ContactApiExample {
 
 // Create an instance of the API class
 ContactApi *apiInstance = [[ContactApi alloc] init];
-Contact *contact = ; // 
+Contact *contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // 
 
 // Add a contact
 [apiInstance contactsPostWith:contact
@@ -2627,7 +2654,7 @@ Contact *contact = ; //
 
 // Create an instance of the API class
 var api = new ContactManagementSystem.ContactApi()
-var contact = ; // {Contact} 
+var contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // {Contact} 
 
 var callback = function(error, data, response) {
   if (error) {
@@ -2680,7 +2707,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 // Create an instance of the API class
 $api_instance = new OpenAPITools\Client\Api\ContactApi();
-$contact = ; // Contact | 
+$contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact | 
 
 try {
     $result = $api_instance->contactsPost($contact);
@@ -2718,7 +2745,7 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = openapi_client.ContactApi()
-contact =  # Contact | 
+contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"} # Contact | 
 
 try: 
     # Add a contact
@@ -2732,7 +2759,7 @@ except ApiException as e:
                               <pre class="prettyprint"><code class="language-rust">extern crate ContactApi;
 
 pub fn main() {
-    let contact = ; // Contact
+    let contact = {"firstName":"John","lastName":"Doe","phoneNumber":"123-456-7890"}; // Contact
 
     let mut context = ContactApi::Context::default();
     let result = client.contactsPost(contact, &context).wait();
@@ -2768,6 +2795,15 @@ $(document).ready(function() {
     "application/json" : {
       "schema" : {
         "$ref" : "#/components/schemas/Contact"
+      },
+      "examples" : {
+        "Contact" : {
+          "value" : {
+            "firstName" : "John",
+            "lastName" : "Doe",
+            "phoneNumber" : "123-456-7890"
+          }
+        }
       }
     }
   },
@@ -2838,6 +2874,15 @@ $(document).ready(function() {
     "application/json" : {
       "schema" : {
         "$ref" : "#/components/schemas/Contact"
+      },
+      "examples" : {
+        "Contact" : {
+          "value" : {
+            "firstName" : "John",
+            "lastName" : "Doe",
+            "phoneNumber" : "123-456-7890"
+          }
+        }
       }
     }
   }
