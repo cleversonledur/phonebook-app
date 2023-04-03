@@ -1,0 +1,45 @@
+version: '3.7'
+
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - ./database:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - my_network
+
+  spring_boot:
+    image: my_spring_boot
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+    ports:
+      - "8081:8081"
+    networks:
+      - my_network
+    environment:
+      - SPRING_DATA_MONGODB_HOST=mongodb
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=phonebook
+
+  react_frontend:
+    image: my_react_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - spring_boot
+    ports:
+      - "3000:3000"
+    networks:
+      - my_network
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8081
+
+networks:
+  my_network:
+    driver: bridge

@@ -1,0 +1,153 @@
+openapi: 3.0.1
+info:
+  title: Contact Management System
+  version: 1.0.0
+servers:
+  - url: /contacts
+paths:
+  /contacts:
+    get:
+      tags:
+        - contact
+      summary: View a list of available contacts
+      parameters:
+        - in: query
+          name: firstName
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: lastName
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: phoneNumber
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: search
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of contacts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Contact"
+        "404":
+          description: No contacts found
+    post:
+      tags:
+        - contact
+      summary: Add a contact
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Contact"
+      responses:
+        "201":
+          description: Contact created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Contact"
+        "400":
+          description: Bad request
+        "500":
+          description: Error processing request
+  /contacts/{id}:
+    get:
+      tags:
+        - contact
+      summary: Get a contact by Id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Contact
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Contact"
+        "404":
+          description: No contact found with id
+        "500":
+          description: Error processing request
+    put:
+      tags:
+        - contact
+      summary: Update a contact
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Contact"
+      responses:
+        "200":
+          description: Contact updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Contact"
+        "400":
+          description: Bad request
+        "500":
+          description: Error processing request
+    delete:
+      tags:
+        - contact
+      summary: Delete a contact
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Contact deleted
+        "400":
+          description: Bad request
+        "500":
+          description: Error processing request
+components:
+  schemas:
+    Contact:
+      type: object
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+          minLength: 2
+          maxLength: 50
+        lastName:
+          type: string
+          minLength: 2
+          maxLength: 50
+        phoneNumber:
+          type: string
+          pattern: ^\d{3}-\d{3}-\d{4}$
+      required:
+        - firstName
+        - lastName
+        - phoneNumber

@@ -1,0 +1,8 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: ${MONGODB_PORT:27017}
+      database: phonebook
